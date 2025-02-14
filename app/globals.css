@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Space+Grotesk:wght@300;400;700&family=Orbitron:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0 0; /* Black */
+  --foreground: 224 224 224; /* Light gray */
+  
+  /* Medieval-Futuristic Color Palette */
+  --regal-primary: 139 0 0;     /* Deep Red */
+  --regal-gold: 255 215 0;      /* Bright Gold */
+  --regal-cream: 255 248 220;   /* Soft Cream */
+  --regal-dark: 75 0 130;       /* Deep Purple */
+  --regal-light: 153 50 204;    /* Vibrant Purple */
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+/* Medieval-Futuristic Scrollbar */
+::-webkit-scrollbar {
+  @apply w-2 bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-regal-gold rounded-full;
+}
+
+/* Glow and Shimmer Effects */
+.medieval-glow {
+  @apply transition-all duration-300 hover:shadow-medieval;
+}
+
+.tech-pulse {
+  @apply animate-tech-pulse;
+}
+
+/* Typography Styles */
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  @apply text-regal-gold;
+}
+
+.medieval-title {
+  @apply text-regal-gold font-cinzel tracking-wider;
+}
+
+.futuristic-text {
+  font-family: 'Orbitron', sans-serif;
+  @apply text-regal-light tracking-widest;
+}
+
+/* Button Styles */
+.medieval-btn {
+  @apply px-6 py-3 
+         bg-regal-gold 
+         text-black 
+         font-space 
+         rounded-lg 
+         hover:bg-regal 
+         transition-all 
+         duration-300 
+         shadow-medieval 
+         hover:scale-105;
+}
+
+.tech-btn {
+  @apply px-6 py-3 
+         bg-regal 
+         text-regal-cream 
+         font-medievaltech 
+         rounded-xl 
+         hover:bg-regal-gold 
+         transition-all 
+         duration-300 
+         shadow-futuristic 
+         hover:shadow-2xl;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+  .text-shadow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.8;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.2);
+  }
+}
+
+.vertical-light {
+  animation: pulse-glow 3s infinite ease-in-out;
+}
