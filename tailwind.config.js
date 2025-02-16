@@ -22,7 +22,18 @@ module.exports = {
       },
       colors: {
         regal: {
-          DEFAULT: "#8B0000", // Deep red, medieval royal color
+          DEFAULT: "#8B0000",
+          50: '#FFE4E1',    // Misty rose (lightest)
+          100: '#FFC0CB',   // Pink
+          200: '#FF6347',   // Tomato
+          300: '#CD5C5C',   // Indian red
+          400: '#B22222',   // Firebrick
+          500: '#8B0000',   // Dark red (main color)
+          600: '#800000',   // Maroon
+          700: '#6B0000',   // Dark maroon
+          800: '#5C0000',   // Very dark red
+          900: '#4B0000',   // Darkest red
+          DEFAULT: '#8B0000', // Default to the 500 shade
           gold: "#FFD700",    // Bright gold for highlights
           cream: "#FFF8DC",   // Soft cream for backgrounds
           dark: "#4B0082",    // Deep purple-indigo for depth

@@ -8,7 +8,14 @@ import HowItWorks from "../components/HowItWorks"
 import MiniGames from "../components/MiniGames"
 import MonthlyRanking from "../components/MonthlyRanking"
 import PlansAndPricing from "../components/PlansAndPricing"
+import Testimonials from "../components/Testimonials"
+import Ranking from "../components/Ranking"
+import AboutUs from "../components/AboutUs"
+import Platform from "../components/Platform"
+import Methods from "../components/Methods"
+import Pricing from "../components/Pricing"
 import FinalCTA from "../components/FinalCTA"
+import FAQ from "@/components/FAQ"
 
 export default function Home() {
   const [gateOpened, setGateOpened] = useState(false)
@@ -31,11 +38,13 @@ export default function Home() {
       {gateOpened && (
         <>
           <HeroMain />
-          <HowItWorks />
-          <MiniGames />
-          <MonthlyRanking />
-          <PlansAndPricing />
-          <FinalCTA />
+          <AboutUs />
+          <Platform />
+          <Methods />
+          <Ranking />
+          <Testimonials />
+          <Pricing />
+          <FAQ />
         </>
       )}
     </main>

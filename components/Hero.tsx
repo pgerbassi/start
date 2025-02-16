@@ -60,16 +60,16 @@ export default function Hero({ onGateOpen }: HeroProps) {
                 whileTap={{ scale: 0.95 }}
                 onClick={handleGateClick}
               >
-                <Image 
-                  src="/logo.png" 
-                  alt="Language Arena Logo" 
+               {/* <Image 
+                  src="" 
+                  alt="" 
                   width={250} 
                   height={250} 
                   className="transition-all duration-300 
                              group-hover:shadow-medieval 
                              group-hover:brightness-110 
                              rounded-full"
-                />
+                />*/ }
                 <div className="absolute inset-0 bg-regal-gold/20 
                                 opacity-0 group-hover:opacity-30 
                                 rounded-full 
@@ -78,13 +78,13 @@ export default function Hero({ onGateOpen }: HeroProps) {
               </motion.div>
               
               <motion.div
-                className="mt-4 text-center"
+                className="-mt-[30vh] text-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
               >
-                <span className="text-sm font-space 
-                                 bg-regal/20 text-regal-gold 
+                <span className="text-sm font-cinzel font-bold 
+                                 bg-regal/80 text-regal-gold 
                                  px-4 py-2 
                                  rounded-full 
                                  backdrop-blur-sm 
@@ -104,10 +104,10 @@ export default function Hero({ onGateOpen }: HeroProps) {
           transition={{ duration: 2, ease: [0.9, 0.0, 0.2, 1] }}
         >
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/door-left-WthIvAKbFy5bQXrYdrd7S1Tu7XMpXO.png"
+            src="/door-left-ofc.png"
             alt="Left Door"
             fill
-            className="object-cover object-right"
+            className="object-cover md:object-fill object-right"
             priority
           />
         </motion.div>
@@ -118,10 +118,10 @@ export default function Hero({ onGateOpen }: HeroProps) {
           transition={{ duration: 2, ease: [0.9, 0.0, 0.2, 1] }}
         >
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/door-right-Aym9BG8R9oxnuqfDhj8W9wgV0k4WKf.png"
+            src="/door-right-ofc.png"
             alt="Right Door"
             fill
-            className="object-cover object-left"
+            className="object-cover md:object-fill object-left"
             priority
           />
         </motion.div>
@@ -129,7 +129,7 @@ export default function Hero({ onGateOpen }: HeroProps) {
         <AnimatePresence>
           {!isGateClicked && (
             <motion.button
-              className="absolute z-20 w-48 h-48 rounded-full bg-transparent text-white font-bold text-lg cursor-pointer overflow-visible"
+              className="absolute z-20 justify-center mt-10 w-64 h-64 md:w-96 rounded-full bg-transparent text-white font-bold text-lg cursor-pointer overflow-visible"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               initial={{ opacity: 0, scale: 0.5 }}
@@ -197,8 +197,36 @@ export default function Hero({ onGateOpen }: HeroProps) {
                 ))}
 
                 {/* Inner content */}
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-yellow-300 to-yellow-600 rounded-full opacity-10">
-                  <span className="relative z-10 text-white text-2xl font-bold text-shadow">Click to enter</span>
+                <div className="absolute inset-0 -mt-24 flex items-center justify-center opacity-100">
+                  <motion.span 
+                    className="relative z-10 text-4xl font-cinzel font-bold"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ 
+                      opacity: [0.7, 1, 0.7],
+                      scale: [0.9, 1, 0.9],
+                      color: [
+                        'rgba(255, 215, 0, 1)',   // Gold
+                        'rgba(255, 165, 0, 1)',   // Orange
+                        'rgba(255, 255, 255, 1)', // White
+                        'rgba(255, 215, 0, 1)'    // Back to Gold
+                      ]
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Number.POSITIVE_INFINITY,
+                      repeatType: "loop",
+                      ease: "easeInOut"
+                    }}
+                    style={{
+                      textShadow: `
+                        0 0 10px rgba(255, 215, 0, 0.7), 
+                        0 0 20px rgba(255, 165, 0, 0.5), 
+                        0 0 30px rgba(255, 255, 255, 0.3)
+                      `
+                    }}
+                  >
+                    ABRIR
+                  </motion.span>
                 </div>
               </div>
             </motion.button>
