@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef, useCallback } from "react"
 import Image from "next/image"
 import HeroMain from "./HeroMain";
 
@@ -12,12 +12,21 @@ interface HeroProps {
 export default function Hero({ onGateOpen }: HeroProps) {
   const [isGateClicked, setIsGateClicked] = useState(false)
   const [showContent, setShowContent] = useState(false)
+  const audioRef = useRef<HTMLAudioElement>(null)
 
-  const handleGateClick = () => {
+  const handleGateClick = useCallback(() => {
+    // Play sound effect if audio is available
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0
+      audioRef.current.play().catch(error => {
+        console.warn("Audio play failed:", error)
+      })
+    }
+
     setIsGateClicked(true)
     setTimeout(() => setShowContent(true), 2000)
     setTimeout(onGateOpen, 3500)
-  }
+  }, [onGateOpen])
 
   useEffect(() => {
     if (isGateClicked) {
@@ -37,6 +46,13 @@ export default function Hero({ onGateOpen }: HeroProps) {
       animate={isGateClicked ? { background: "radial-gradient(circle, #2a2a2a 0%, #000000 100%)" } : {}}
       transition={{ duration: 2 }}
     >
+      {/* Hidden audio element for sound effect */}
+      <audio 
+        ref={audioRef} 
+        src="/sounds/door-open-sound.mp3"
+        preload="auto"
+      />
+
       <AnimatePresence>
         {!isGateClicked && (
           <motion.div 
@@ -129,7 +145,7 @@ export default function Hero({ onGateOpen }: HeroProps) {
         <AnimatePresence>
           {!isGateClicked && (
             <motion.button
-              className="absolute z-20 justify-center mt-10 w-64 h-64 md:w-96 rounded-full bg-transparent text-white font-bold text-lg cursor-pointer overflow-visible"
+              className="absolute z-20 justify-center mt-10 w-64 h-64 md:-mt-14 md:w-10 md:h-10 rounded-full bg-transparent text-white font-bold text-lg cursor-pointer overflow-visible"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               initial={{ opacity: 0, scale: 0.5 }}
