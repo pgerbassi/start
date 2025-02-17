@@ -287,7 +287,7 @@ function VerticalLight() {
       transition={{ duration: 0.2 }}
     >
       <motion.div
-        className="relative bg-white"
+        className="relative bg-gradient-to-t from-yellow-100 via-yellow-50 to-amber-100"
         initial={{ height: 0, width: "1px", opacity: 1 }}
         animate={{
           height: ["0vh", "150vh", "150vh"],
