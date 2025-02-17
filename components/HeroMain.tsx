@@ -1,5 +1,7 @@
 import { Shield, Sword } from "lucide-react";
 import { useEffect, useState, useCallback, type FC } from "react";
+import AnimatedButton from "./ui/animated-button";
+import Image from "next/image";
 
 interface HeroMainProps {
   /**
@@ -66,6 +68,34 @@ const HeroMain: FC<HeroMainProps> = ({
                   cursor-pointer  ${className}`}
       onClick={handleHeroClick}
     >
+      {/* New Header Section */}
+      <header className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-4 md:px-8 py-4">
+        <div className="flex items-center">
+          {/*<h1 className="font-cinzel text-sm md:text-xl font-bold text-regal-gold 
+                         tracking-wider 
+                         drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] text-opacity-50">
+            Language Arena
+          </h1>*/}
+                    <Image 
+            src="/logo-ofc.png" 
+            alt="Language Arena Logo" 
+            width={80} 
+            height={80} 
+            className="transition-transform duration-300 opacity-50 hover:scale-110 "
+          />
+        </div>
+        <div className="flex items-center rounded-full">
+          <Image 
+            src="/logo1.png" 
+            alt="Language Arena Logo" 
+            width={80} 
+            height={80} 
+            className="transition-transform rounded-full duration-300 opacity-50 hover:scale-110 "
+          />
+        </div>
+      </header>
+
+      {/* Existing background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-opacity-0 opacity-10 animate-glow-pulse"
         style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -74,8 +104,9 @@ const HeroMain: FC<HeroMainProps> = ({
         <div className="absolute inset-0 bg-regal opacity-90 mix-blend-multiply"></div>
       </div>
       
+      {/* Existing content - adjust top margin to account for header */}
       <div className="relative container mx-auto px-4 py-12 md:py-24 
-                      flex flex-col md:flex-row items-center justify-between min-h-screen gap-8">
+                      flex flex-col md:flex-row items-center justify-between min-h-screen mt-16">
         <div className="text-center md:text-left space-y-8 max-w-2xl w-full md:w-1/2">
           <div className="text-center space-y-8 max-w-4xl mx-auto">
             <div className="inline-block">
@@ -125,18 +156,24 @@ const HeroMain: FC<HeroMainProps> = ({
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <AnimatedButton
+              onClick={(e) => {
+                e.stopPropagation();
+                console.log("Animated button clicked!");
+              }}
+            />
               <button 
                 className="medieval-btn group relative px-8 py-4 bg-regal-gold text-black font-medievaltech font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,215,0,0.5)]"
                 onClick={e => e.stopPropagation()} // Prevenir tratador de clique do herói
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   <Shield className="w-5 h-5" />
-                  Iniciar Jornada
+                  Aprender Mais
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-white via-regal-gold to-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
               </button>
-              
-              <button 
+
+              {/*<button 
                 className="tech-btn group px-8 py-4 bg-transparent text-regal-gold border-2 border-regal-gold/50 font-medievaltech font-medium rounded-lg transition-all duration-300 hover:border-regal-gold hover:bg-regal-gold/10 hover:scale-105"
                 onClick={e => e.stopPropagation()} // Prevenir tratador de clique do herói
               >
@@ -144,7 +181,7 @@ const HeroMain: FC<HeroMainProps> = ({
                   <Sword className="w-5 h-5" />
                   Aprender Mais
                 </span>
-              </button>
+              </button>*/}
             </div>
           </div>
         </div>

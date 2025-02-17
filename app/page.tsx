@@ -16,6 +16,7 @@ import Methods from "../components/Methods"
 import Pricing from "../components/Pricing"
 import FinalCTA from "../components/FinalCTA"
 import FAQ from "@/components/FAQ"
+import Prizes from "../components/Prizes"
 
 export default function Home() {
   const [gateOpened, setGateOpened] = useState(false)
@@ -42,6 +43,7 @@ export default function Home() {
           <Platform />
           <Methods />
           <Ranking />
+          <Prizes />
           <Testimonials />
           <Pricing />
           <FAQ />

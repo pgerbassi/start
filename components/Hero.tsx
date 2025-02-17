@@ -77,17 +77,17 @@ export default function Hero({ onGateOpen }: HeroProps) {
                 onClick={handleGateClick}
               >
                 <Image 
-                  src="/logoofc.png" 
+                  src="/logo-ofc.png" 
                   alt="LP Coliseu Logo" 
-                  width={300} 
-                  height={300} 
+                  width={430} 
+                  height={430} 
                   className="transition-all duration-300 
-                             group-hover:shadow-medieval 
+                             
                              group-hover:brightness-110 
-                             rounded-full"
+                             rounded-lg py-4"
                 />
                 <div className="absolute inset-0 bg-regal-gold/20 
-                                opacity-0 group-hover:opacity-30 
+                                opacity-0 group-hover:opacity-0 border-none 
                                 rounded-full 
                                 transition-opacity duration-300 
                                 pointer-events-none"></div>
@@ -99,7 +99,7 @@ export default function Hero({ onGateOpen }: HeroProps) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
               >
-                <span className="text-sm md:text-lg font-cinzel font-bold 
+                <span className="text-sm md:text-base font-cinzel font-bold 
                                  bg-black/50 text-regal-gold 
                                  px-4 py-2 
                                  rounded-full 

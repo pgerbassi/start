@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Crown, Medal, Shield, Star } from "lucide-react";
 import { useState } from "react";
+import AnimatedButton from "./ui/animated-button";
 
 interface RankTier {
   name: string;
@@ -203,6 +204,14 @@ const Ranking = () => {
       {/* Elementos decorativos */}
       <div className="absolute top-10 left-10 w-32 h-32 bg-gray-800/5 rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-10 w-32 h-32 bg-gray-800/5 rounded-full blur-3xl" />
+      <div className="container mx-auto px-4 text-center justify-center items-center content-center ">
+      <AnimatedButton className="bg-gradient-to-r from-regal-gold/70 via-regal/50 to-regal-gold/70"
+        onClick={(e) => {
+          e.stopPropagation();
+          console.log("Animated button clicked!");
+        }}
+      />
+      </div>
     </section>
   );
 };

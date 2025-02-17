@@ -11,24 +11,24 @@ import {
 const depoimentos = [
   {
     id: 1,
-    name: "Alex Silva",
-    role: "Jogador Profissional",
+    name: "Felipe",
+    role: "Desafio de ser tornar hiperpoliglota em 1 ano",
     rating: 5,
-    // videoUrl to be added later
+    videoUrl: "0E5MqKoD0dA",
   },
   {
     id: 2,
-    name: "Sara Santos",
-    role: "Campeã de Torneio",
+    name: "Daniele",
+    role: "Conquistou o certificado de proficiência em alemão em 1 mês",
     rating: 5,
-    // videoUrl to be added later
+    videoUrl: "1tjNbqwuAIc",
   },
   {
     id: 3,
-    name: "Miguel Oliveira",
-    role: "Líder de Guilda",
+    name: "Fluência em 2 meses em RUSSO",
+    role: "João",
     rating: 5,
-    // videoUrl to be added later
+    videoUrl: "j7Qz9frfXPw",
   },
 ];
 
@@ -76,12 +76,30 @@ const Depoimentos = () => {
                 >
                   <div className="relative group">
                     {/* Contêiner de Vídeo */}
-                    <div className="aspect-video bg-black/80 rounded-xl overflow-hidden border border-regal-gold/30">
-                      <div className="w-full h-full flex items-center justify-center">
-                        <p className="text-regal-gold/60 font-space text-sm">
-                          Vídeo do YouTube em breve
-                        </p>
-                      </div>
+                    <div className="aspect-video bg-black/80 rounded-xl overflow-hidden border border-regal-gold/30 relative group">
+                      <iframe
+                        src={`https://www.youtube.com/embed/${depoimento.videoUrl}?autoplay=0&modestbranding=1&rel=0`}
+                        title={`Depoimento de ${depoimento.name}`}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full z-10 relative"
+                      />
+                      {/* Overlay para melhorar interatividade */}
+                      <a 
+                        href={`https://www.youtube.com/watch?v=${depoimento.videoUrl}`} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="absolute inset-0 z-20 cursor-pointer group"
+                      >
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                                        bg-regal-gold/80 text-black px-4 py-2 rounded-full 
+                                        opacity-0 group-hover:opacity-100 
+                                        transition-all duration-300 
+                                        flex items-center justify-center">
+                          <span className="font-bold text-sm">Assistir</span>
+                        </div>
+                      </a>
                       {/* Efeito de brilho ao passar o mouse */}
                       <div className="absolute -inset-0.5 bg-gradient-to-r from-regal-gold/20 to-regal-500/20 rounded-xl opacity-0 group-hover:opacity-100 blur transition duration-500" />
                     </div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Gamepad2, Rocket, Trophy, Users } from "lucide-react";
+import AnimatedButton from "./ui/animated-button";
 
 const features = [
   {
@@ -63,7 +64,12 @@ const Platform = () => {
             {/* Efeito de brilho */}
             <div className="absolute -inset-2 bg-regal-gold/20 blur-xl opacity-50" />
           </motion.div>
-
+          <AnimatedButton
+            onClick={(e) => {
+              e.stopPropagation();
+              console.log("Animated button clicked!");
+            }}
+          />
           {/* Grade de Recursos */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {features.map((feature, index) => (
