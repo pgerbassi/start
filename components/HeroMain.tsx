@@ -133,7 +133,7 @@ const HeroMain: FC<HeroMainProps> = ({
             alt="Language Arena Logo" 
             width={450} 
             height={400} 
-            className="transition-transform w-[60vw] h-[10vh] md:w-[25vw] md:h-[20vh] duration-300 opacity-80 hover:scale-110 mb-8"
+            className="transition-transform w-[60vw] h-[10vh] md:w-[25vw] md:h-[20vh] duration-300 opacity-95 hover:scale-110 mb-8"
           />
         </div>
               <span className="block mt-2 text-2xl bg-gradient-to-r from-regal-gold via-white to-regal-gold bg-clip-text text-transparent">
