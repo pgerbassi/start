@@ -102,6 +102,7 @@ const HeroMain: FC<HeroMainProps> = ({
       >
         {/* Regal color overlay */}
         <div className="absolute inset-0 bg-regal opacity-90 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-black opacity-40 mix-blend-multiply"></div>
       </div>
       
       {/* Existing content - adjust top margin to account for header */}

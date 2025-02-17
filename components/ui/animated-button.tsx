@@ -41,6 +41,29 @@ const AnimatedButton = ({
         )}
       </AnimatePresence>
 
+      {/* Gold Shining Glow Blur Background */}
+      <motion.div
+        className="absolute -inset-4 bg-gradient-to-r from-regal-gold/50 via-regal-gold/30 to-regal-gold/50 rounded-xl opacity-0 group-hover:opacity-100 blur-3xl transition-opacity duration-500"
+        animate={{
+          scale: [1, 1.2, 1],
+          rotate: [0, 10, -10, 0],
+          backgroundPosition: ["0% 0%", "100% 100%"],
+          boxShadow: [
+            '0 0 50px rgba(255,215,0,0.5)',
+            '0 0 100px rgba(255,215,0,0.7)',
+            '0 0 50px rgba(255,215,0,0.5)'
+          ]
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          repeatType: "reverse"
+        }}
+        style={{
+          backgroundSize: '200% 200%'
+        }}
+      />
+
       <button
         {...props}
         onClick={handleClick}

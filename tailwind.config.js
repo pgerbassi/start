@@ -91,7 +91,7 @@ module.exports = {
         },
       },
       animation: {
-        "glow-pulse": "glow-pulse 3s ease-in-out infinite",
+        "glow-pulse": "glow-pulse 6s ease-in-out infinite",
         "medieval-shimmer": "medieval-shimmer 3s linear infinite",
         "tech-pulse": "tech-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
