@@ -115,7 +115,7 @@ const HeroMain: FC<HeroMainProps> = ({
                                bg-regal/20 text-regal-gold 
                                backdrop-blur-sm border border-regal-gold/30 
                                animate-medieval-shimmer">
-                Bem-vindo ao Futuro do Aprendizado
+                Bem-vindo à Arena
               </span>
             </div>
             
@@ -147,7 +147,7 @@ const HeroMain: FC<HeroMainProps> = ({
             </p>
 
             {/* Exibição interativa de palavra estilo Hangman */}
-            <div className="flex justify-center gap-2 mt-6">
+            {/*<div className="flex justify-center gap-2 mt-6">
               {wordDisplay.map((letter, index) => (
                 <div
                   key={index}
@@ -162,7 +162,7 @@ const HeroMain: FC<HeroMainProps> = ({
                   {letter}
                 </div>
               ))}
-            </div>
+            </div>*/}
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <AnimatedButton
@@ -171,7 +171,7 @@ const HeroMain: FC<HeroMainProps> = ({
                 console.log("Animated button clicked!");
               }}
             />
-              <button 
+              {/*<button 
                 className="medieval-btn group relative px-8 py-4 mb-8 bg-regal-gold text-black font-medievaltech font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,215,0,0.5)]"
                 onClick={e => e.stopPropagation()} // Prevenir tratador de clique do herói
               >
@@ -180,7 +180,7 @@ const HeroMain: FC<HeroMainProps> = ({
                   Aprender Mais
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-white via-regal-gold to-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-              </button>
+              </button>*/}
 
               {/*<button 
                 className="tech-btn group px-8 py-4 bg-transparent text-regal-gold border-2 border-regal-gold/50 font-medievaltech font-medium rounded-lg transition-all duration-300 hover:border-regal-gold hover:bg-regal-gold/10 hover:scale-105"
