@@ -164,7 +164,7 @@ const HeroMain: FC<HeroMainProps> = ({
               ))}
             </div>*/}
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 pb-12">
             <AnimatedButton
               onClick={(e) => {
                 e.stopPropagation();

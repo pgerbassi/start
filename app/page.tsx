@@ -23,7 +23,17 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <AnimatePresence>
+
+      <HeroMain />
+          <AboutUs />
+          <Platform />
+          <Methods />
+          <Ranking />
+          <Prizes />
+          <Testimonials />
+          <Pricing />
+          <FAQ />
+      {/*<AnimatePresence>
         {!gateOpened && (
           <motion.div
             initial={{ opacity: 1 }}
@@ -48,7 +58,7 @@ export default function Home() {
           <Pricing />
           <FAQ />
         </>
-      )}
+      )}*/}
     </main>
   )
 }

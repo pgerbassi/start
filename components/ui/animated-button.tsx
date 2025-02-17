@@ -91,7 +91,7 @@ const AnimatedButton = ({
 
         {/* Intense Neon Glow Effect */}
         <motion.div
-          className="absolute -inset-1 bg-gradient-to-r from-regal-gold/50 via-orange-500/30 to-regal-gold/50 rounded-lg opacity-0 group-hover:opacity-70 blur-xl transition-opacity duration-500"
+          className="absolute -inset-1 bg-gradient-to-r from-regal-gold/90 via-orange-500/90 to-regal-gold/90 rounded-lg opacity-0 group-hover:opacity-70 blur-xl transition-opacity duration-500"
           animate={{
             scale: [1, 1.1, 1],
             opacity: [0, 0.7, 0]
@@ -126,7 +126,7 @@ const AnimatedButton = ({
 
         {/* Button content */}
         <div className="relative z-10 flex items-center justify-center gap-2">
-          <span className="font-cinzel font-bold text-regal-gold text-shadow-[0_0_10px_rgba(255,215,0,0.7)]">
+          <span className="font-cinzel font-bold text-regal text-shadow-[0_0_10px_rgba(255,215,0,0.7)]">
             {isSliced ? (
               <div className="flex gap-4">
                 <motion.span
@@ -162,12 +162,12 @@ const AnimatedButton = ({
               }
             }}
           >
-            <Sword className="w-5 h-5 text-regal-gold drop-shadow-[0_0_5px_rgba(255,215,0,0.7)]" />
+            <Sword className="w-5 h-5 text-regal drop-shadow-[0_0_5px_rgba(255,215,0,0.7)]" />
           </motion.div>
         </div>
 
         {/* Glow effect */}
-        <div className="absolute -inset-1 bg-gradient-to-r from-regal-gold via-orange-500 to-regal-gold rounded-lg opacity-0 group-hover:opacity-40 blur transition-opacity duration-500" />
+        <div className="absolute -inset-1 bg-gradient-to-r from-regal-gold via-orange-500 to-regal-gold rounded-lg opacity-50 group-hover:opacity-40 blur transition-opacity duration-500" />
       </button>
     </div>
   );
