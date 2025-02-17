@@ -69,8 +69,8 @@ const HeroMain: FC<HeroMainProps> = ({
       onClick={handleHeroClick}
     >
       {/* New Header Section */}
-      <header className="absolute top-0 left-0 right-0 z-20 flex items-center justify-center px-4 md:px-8 py-4">
-        {/*<div className="flex items-center">
+      {/*<header className="absolute top-0 left-0 right-0 z-20 flex items-center justify-center px-4 md:px-8 py-4">
+        <div className="flex items-center">
           <h1 className="font-cinzel text-sm md:text-xl font-bold text-regal-gold 
                          tracking-wider 
                          drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] text-opacity-50">
@@ -84,16 +84,16 @@ const HeroMain: FC<HeroMainProps> = ({
             className="transition-transform duration-300 opacity-50 hover:scale-110 "
           />
         </div>*/}
-        <div className="flex items-center rounded-full">
+        {/*<div className="flex items-center rounded-full w-[130px] h-[130px]">
           <Image 
-            src="/logo.png" 
+            src="/logo1.png" 
             alt="Language Arena Logo" 
-            width={200} 
-            height={200} 
+            width={150} 
+            height={150} 
             className="transition-transform rounded-full duration-300 opacity-50 hover:scale-110 "
           />
         </div>
-      </header>
+      </header>*/}
 
       {/* Existing background image */}
       <div 
@@ -105,8 +105,8 @@ const HeroMain: FC<HeroMainProps> = ({
       </div>
       
       {/* Existing content - adjust top margin to account for header */}
-      <div className="relative container mx-auto px-4 py-12 md:py-24 
-                      flex flex-col md:flex-row items-center justify-between min-h-screen mt-16">
+      <div className="relative container mx-auto px-4 py-12 md:py-0
+                      flex flex-col md:flex-row items-center justify-between min-h-screen mt-8">
         <div className="text-center md:text-left space-y-8 max-w-2xl w-full md:w-1/2">
           <div className="text-center space-y-8 max-w-4xl mx-auto">
             <div className="inline-block">
@@ -132,7 +132,7 @@ const HeroMain: FC<HeroMainProps> = ({
             alt="Language Arena Logo" 
             width={450} 
             height={400} 
-            className="transition-transform rounded-full duration-300 opacity-80 hover:scale-110 "
+            className="transition-transform w-[60vw] h-[10vh] md:w-[25vw] md:h-[20vh] duration-300 opacity-80 hover:scale-110 mb-8"
           />
         </div>
               <span className="block mt-2 text-2xl bg-gradient-to-r from-regal-gold via-white to-regal-gold bg-clip-text text-transparent">
@@ -172,7 +172,7 @@ const HeroMain: FC<HeroMainProps> = ({
               }}
             />
               <button 
-                className="medieval-btn group relative px-8 py-4 bg-regal-gold text-black font-medievaltech font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,215,0,0.5)]"
+                className="medieval-btn group relative px-8 py-4 mb-8 bg-regal-gold text-black font-medievaltech font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,215,0,0.5)]"
                 onClick={e => e.stopPropagation()} // Prevenir tratador de clique do herói
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
