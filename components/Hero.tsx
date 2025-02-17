@@ -100,7 +100,7 @@ export default function Hero({ onGateOpen }: HeroProps) {
                 transition={{ delay: 0.5 }}
               >
                 <span className="text-sm md:text-lg font-cinzel font-bold 
-                                 bg-regal/80 text-regal-gold 
+                                 bg-black/50 text-regal-gold 
                                  px-4 py-2 
                                  rounded-full 
                                  backdrop-blur-sm 
