@@ -69,13 +69,13 @@ const HeroMain: FC<HeroMainProps> = ({
       onClick={handleHeroClick}
     >
       {/* New Header Section */}
-      <header className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-4 md:px-8 py-4">
-        <div className="flex items-center">
-          {/*<h1 className="font-cinzel text-sm md:text-xl font-bold text-regal-gold 
+      <header className="absolute top-0 left-0 right-0 z-20 flex items-center justify-center px-4 md:px-8 py-4">
+        {/*<div className="flex items-center">
+          <h1 className="font-cinzel text-sm md:text-xl font-bold text-regal-gold 
                          tracking-wider 
                          drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] text-opacity-50">
             Language Arena
-          </h1>*/}
+          </h1>*
                     <Image 
             src="/logo-ofc.png" 
             alt="Language Arena Logo" 
@@ -83,13 +83,13 @@ const HeroMain: FC<HeroMainProps> = ({
             height={80} 
             className="transition-transform duration-300 opacity-50 hover:scale-110 "
           />
-        </div>
+        </div>*/}
         <div className="flex items-center rounded-full">
           <Image 
-            src="/logo1.png" 
+            src="/logo.png" 
             alt="Language Arena Logo" 
-            width={80} 
-            height={80} 
+            width={200} 
+            height={200} 
             className="transition-transform rounded-full duration-300 opacity-50 hover:scale-110 "
           />
         </div>
@@ -121,12 +121,21 @@ const HeroMain: FC<HeroMainProps> = ({
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl 
                            font-cinzel font-bold text-foreground 
-                           leading-tight medieval-glow">
-              <span className="block bg-gradient-to-r from-regal-gold via-white to-regal-gold 
+                           ">
+              {/*<span className="block bg-gradient-to-r from-regal-gold via-white to-regal-gold 
                                bg-clip-text text-transparent">
                 Language Arena
-              </span>
-              <span className="block mt-2 text-2xl text-regal-cream">
+              </span>*/}
+                      <div className="flex items-center content-center justify-center">
+          <Image 
+            src="/logo-ofc.png" 
+            alt="Language Arena Logo" 
+            width={450} 
+            height={400} 
+            className="transition-transform rounded-full duration-300 opacity-80 hover:scale-110 "
+          />
+        </div>
+              <span className="block mt-2 text-2xl bg-gradient-to-r from-regal-gold via-white to-regal-gold bg-clip-text text-transparent">
                 Defenda suas Palavras
               </span>
             </h1>

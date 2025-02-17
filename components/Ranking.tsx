@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Crown, Medal, Shield, Star } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import AnimatedButton from "./ui/animated-button";
 
@@ -7,7 +7,7 @@ interface RankTier {
   name: string;
   range: string;
   color: string;
-  icon: React.ElementType;
+  image: string;
   description: string;
   borderColor: string;
   bgFrom: string;
@@ -19,7 +19,7 @@ const ranks: RankTier[] = [
     name: "Bronze",
     range: "0 - 500",
     color: "text-[#CD7F32]",
-    icon: Shield,
+    image: "/rankings/bronze.png",
     description: "Início da jornada",
     borderColor: "border-[#CD7F32]",
     bgFrom: "from-[#CD7F32]",
@@ -29,7 +29,7 @@ const ranks: RankTier[] = [
     name: "Prata",
     range: "501 - 1000",
     color: "text-gray-400",
-    icon: Shield,
+    image: "/rankings/prata.png",
     description: "Guerreiro em ascensão",
     borderColor: "border-gray-400",
     bgFrom: "from-gray-400",
@@ -39,7 +39,7 @@ const ranks: RankTier[] = [
     name: "Ouro",
     range: "1001 - 1500",
     color: "text-yellow-500",
-    icon: Medal,
+    image: "/rankings/ouro.png",
     description: "Campeão experiente",
     borderColor: "border-yellow-500",
     bgFrom: "from-yellow-500",
@@ -49,7 +49,7 @@ const ranks: RankTier[] = [
     name: "Platina",
     range: "1501 - 2000",
     color: "text-cyan-400",
-    icon: Star,
+    image: "/rankings/platina.png",
     description: "Competidor de elite",
     borderColor: "border-cyan-400",
     bgFrom: "from-cyan-400",
@@ -59,7 +59,7 @@ const ranks: RankTier[] = [
     name: "Diamante",
     range: "2001 - 2225",
     color: "text-blue-400",
-    icon: Star,
+    image: "/rankings/diamante.png",
     description: "Perfeição de diamante",
     borderColor: "border-blue-400",
     bgFrom: "from-blue-400",
@@ -69,7 +69,7 @@ const ranks: RankTier[] = [
     name: "Mestre",
     range: "2226 - 2500",
     color: "text-purple-500",
-    icon: Crown,
+    image: "/rankings/mestre.png",
     description: "Estrategista magistral",
     borderColor: "border-purple-500",
     bgFrom: "from-purple-500",
@@ -79,7 +79,7 @@ const ranks: RankTier[] = [
     name: "Lendário",
     range: "2501 - 3000",
     color: "text-red-500",
-    icon: Crown,
+    image: "/rankings/lendario.png",
     description: "Guerreiro lendário",
     borderColor: "border-red-500",
     bgFrom: "from-red-500",
@@ -132,7 +132,13 @@ const Ranking = () => {
                   backdrop-blur-sm border ${rank.borderColor} transition-all duration-300
                   group-hover:border-opacity-100 border-opacity-50
                 `}>
-                  <rank.icon className={`w-8 h-8 ${rank.color}`} />
+                  <Image 
+                    src={rank.image} 
+                    alt={`${rank.name} Rank`} 
+                    width={80} 
+                    height={80} 
+                    className="w-10/12 h-10/12 object-contain"
+                  />
                 </div>
                 <div className={`
                   absolute -inset-0.5 rounded-full opacity-0 
