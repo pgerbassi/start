@@ -61,9 +61,9 @@ export default function Hero({ onGateOpen }: HeroProps) {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <div className="flex flex-col items-center mt-10">
+            <div className="flex flex-col items-center w-full">
               <motion.div
-                className="group cursor-pointer"
+                className="group cursor-pointer -mt-[45vh] mx-auto"
                 whileHover={{ 
                   scale: 1.05,
                   rotate: [0, -5, 5, 0],
@@ -76,16 +76,16 @@ export default function Hero({ onGateOpen }: HeroProps) {
                 whileTap={{ scale: 0.95 }}
                 onClick={handleGateClick}
               >
-               {/* <Image 
-                  src="" 
-                  alt="" 
-                  width={250} 
-                  height={250} 
+                <Image 
+                  src="/logoofc.png" 
+                  alt="LP Coliseu Logo" 
+                  width={300} 
+                  height={300} 
                   className="transition-all duration-300 
                              group-hover:shadow-medieval 
                              group-hover:brightness-110 
                              rounded-full"
-                />*/ }
+                />
                 <div className="absolute inset-0 bg-regal-gold/20 
                                 opacity-0 group-hover:opacity-30 
                                 rounded-full 
@@ -94,12 +94,12 @@ export default function Hero({ onGateOpen }: HeroProps) {
               </motion.div>
               
               <motion.div
-                className="-mt-[30vh] text-center"
+                className="mt-4 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
               >
-                <span className="text-sm font-cinzel font-bold 
+                <span className="text-sm md:text-lg font-cinzel font-bold 
                                  bg-regal/80 text-regal-gold 
                                  px-4 py-2 
                                  rounded-full 
@@ -120,7 +120,7 @@ export default function Hero({ onGateOpen }: HeroProps) {
           transition={{ duration: 2, ease: [0.9, 0.0, 0.2, 1] }}
         >
           <Image
-            src="/door-left-ofc.png"
+            src="/left-door.png"
             alt="Left Door"
             fill
             className="object-cover md:object-fill object-right"
@@ -134,7 +134,7 @@ export default function Hero({ onGateOpen }: HeroProps) {
           transition={{ duration: 2, ease: [0.9, 0.0, 0.2, 1] }}
         >
           <Image
-            src="/door-right-ofc.png"
+            src="/right-door.png"
             alt="Right Door"
             fill
             className="object-cover md:object-fill object-left"
@@ -153,7 +153,7 @@ export default function Hero({ onGateOpen }: HeroProps) {
               exit={{ opacity: 0, scale: 0.5 }}
               onClick={handleGateClick}
             >
-              <div className="relative w-full h-full">
+              <div className="relative w-16 h-16 -top-10 md:top-0 md:w-full md:h-full mx-auto flex items-center justify-center">
                 {/* Shimmering background */}
                 <motion.div
                   className="absolute inset-0 rounded-full"
@@ -213,13 +213,23 @@ export default function Hero({ onGateOpen }: HeroProps) {
                 ))}
 
                 {/* Inner content */}
-                <div className="absolute inset-0 -mt-24 flex items-center justify-center opacity-100">
-                  <motion.span 
-                    className="relative z-10 text-4xl font-cinzel font-bold"
-                    initial={{ opacity: 0, scale: 0.8 }}
+                <div className="absolute inset-0 mt-32 md:mt-24 flex items-center justify-center opacity-100">
+                  <motion.svg 
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="60"
+                    height="60"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-regal-gold"
+                    initial={{ opacity: 0, y: 20, scale: 0.8 }}
                     animate={{ 
                       opacity: [0.7, 1, 0.7],
-                      scale: [0.9, 1, 0.9],
+                      y: [20, -10, 20],
+                      scale: [0.9, 1.1, 0.9],
                       color: [
                         'rgba(255, 215, 0, 1)',   // Gold
                         'rgba(255, 165, 0, 1)',   // Orange
@@ -228,21 +238,20 @@ export default function Hero({ onGateOpen }: HeroProps) {
                       ]
                     }}
                     transition={{
-                      duration: 3,
+                      duration: 1.5,
                       repeat: Number.POSITIVE_INFINITY,
                       repeatType: "loop",
                       ease: "easeInOut"
                     }}
-                    style={{
-                      textShadow: `
-                        0 0 10px rgba(255, 215, 0, 0.7), 
-                        0 0 20px rgba(255, 165, 0, 0.5), 
-                        0 0 30px rgba(255, 255, 255, 0.3)
-                      `
-                    }}
                   >
-                    ABRIR
-                  </motion.span>
+                    <path 
+                      d="M12 5v14m-7-7l7-7 7 7" 
+                      style={{
+                        filter: `drop-shadow(0 0 5px rgba(255, 215, 0, 0.7)) 
+                                 drop-shadow(0 0 10px rgba(255, 165, 0, 0.5))`
+                      }}
+                    />
+                  </motion.svg>
                 </div>
               </div>
             </motion.button>

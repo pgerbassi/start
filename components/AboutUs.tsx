@@ -4,19 +4,7 @@ import { ScrollArea } from "./ui/scroll-area";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 const languages = [
-  "English", "Spanish", "Portuguese", "French", "Italian", "German", "Dutch", 
-  "Russian", "Mandarin", "Japanese", "Korean", "Arabic", "Hindi", "Bengali",
-  "Turkish", "Persian", "Vietnamese", "Thai", "Indonesian", "Greek", "Swedish",
-  "Norwegian", "Danish", "Finnish", "Polish", "Czech", "Slovak", "Hungarian",
-  "Romanian", "Bulgarian", "Serbian", "Croatian", "Ukrainian", "Hebrew", "Hindi",
-  "Urdu", "Punjabi", "Tamil", "Telugu", "Kannada", "Malayalam", "Marathi",
-  "Gujarati", "Bengali", "Nepali", "Sinhala", "Khmer", "Lao", "Burmese",
-  "Mongolian", "Tibetan", "Kazakh", "Uzbek", "Kyrgyz", "Tajik", "Turkmen",
-  "Armenian", "Georgian", "Azerbaijani", "Albanian", "Lithuanian", "Latvian",
-  "Estonian", "Slovenian", "Macedonian", "Bosnian", "Maltese", "Irish",
-  "Welsh", "Scottish Gaelic", "Breton", "Basque", "Catalan", "Galician",
-  "Corsican", "Sardinian", "Sicilian", "Latin", "Ancient Greek", "Sanskrit",
-  "Classical Chinese", "Old English", "Middle English", "Old Norse"
+"Abecásio", "Avar", "Albanês", "Alemão", "Árabe", "Armênio", "Azerbaijano", "Bashkir", "Bielorusso", "Buriata", "Búlgaro", "Bósnio", "Cantonês", "Cazaque", "Checheno", "Chinês", "Circássio", "Chuvash", "Tatar da Crimeia", "Croata", "Tcheco", "Dinamarquês", "Estoniano", "Faroês", "Finlandes", "Georgiano", "Hebraico", "Hindi", "Húngaro", "Islandês", "Indonésio", "Irlandês", "Inuktikut", "Groelandês", "Italiano", "Cazaque", "Komi", "Curdo", "Coreano", "Quirguiz", "Latgálio", "Letão", "Latim", "Lituano", "Luxemburguês", "Macedônio", "Maltês", "Malaio", "Mongol", "Norueguês", "Occitânico", "Persa", "Polonês", "Romeno", "Russo", "Sânscrito", "Sami", "Gaélico Escocês", "Inglês", "Sérvio", "Siciliano", "Eslovaco", "Esloveno", "Sueco", "Swahili", "Tajik", "Tatar", "Tibetano", "Turco", "Turcomeno", "Tuvano", "Udmurt", "Ucraniano", "Uzbek", "Veneto", "Vietnamita", "Iacuto", "Yiddish", "Francês", "Entre outros +"
 ];
 
 const AboutUs = () => {
@@ -100,7 +88,7 @@ const AboutUs = () => {
             >
               <div className="bg-black/50 backdrop-blur-sm border border-regal-500/20 rounded-xl p-6">
                 <h3 className="text-2xl font-cinzel font-bold text-regal-300 mb-4">
-                  Language Proficiency
+                Proficiência Linguística
                 </h3>
                 
                 <ScrollArea className="h-[400px] rounded-md border border-regal-500/20 p-4">
