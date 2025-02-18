@@ -28,9 +28,9 @@ export default function Home() {
           <AboutUs />
           <Platform />
           <Methods />
+          <Testimonials />
           <Ranking />
           <Prizes />
-          <Testimonials />
           <Pricing />
           <FAQ />
       {/*<AnimatePresence>
