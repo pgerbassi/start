@@ -88,7 +88,7 @@ const ranks: RankTier[] = [
 ];
 
 const Ranking = () => {
-  const [selectedRank, setSelectedRank] = useState<RankTier | null>(null);
+  const [selectedRank, setSelectedRank] = useState<RankTier | null>(ranks[0]);
 
   return (
     <section className="relative min-h-screen py-20 bg-gradient-to-br from-black via-black/80 to-black overflow-hidden">
@@ -135,9 +135,9 @@ const Ranking = () => {
                   <Image 
                     src={rank.image} 
                     alt={`${rank.name} Rank`} 
-                    width={80} 
-                    height={80} 
-                    className="w-10/12 h-10/12 object-contain"
+                    width={100} 
+                    height={100} 
+                    className="w-16 h-16 object-contain"
                   />
                 </div>
                 <div className={`
