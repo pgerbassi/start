@@ -1,22 +1,9 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Check, Crown, Sword, Shield } from "lucide-react";
-import { Button } from "./ui/button";
+import  AnimatedButton2  from "./ui/animated-button-2";
 
 const plans = [
-  {
-    name: "Escudeiro",
-    icon: Shield,
-    price: "19",
-    description: "Perfeito para iniciantes começando sua jornada",
-    features: [
-      "Guias básicos de estratégia",
-      "Acesso ao fórum da comunidade",
-      "Torneios semanais",
-      "Análises básicas",
-    ],
-    color: "from-blue-500/20 via-purple-500/20 to-blue-500/20",
-    colorHover: "from-regal/30 via-regal-gold/30 to-regal/30",
-  },
   {
     name: "Cavaleiro",
     icon: Sword,
@@ -32,22 +19,6 @@ const plans = [
     color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
     colorHover: "from-regal-gold/30 via-orange-500/30 to-regal-gold/30",
     popular: true,
-  },
-  {
-    name: "Rei",
-    icon: Crown,
-    price: "99",
-    description: "Pacote definitivo para jogadores profissionais",
-    features: [
-      "Base de estratégias de elite",
-      "Acesso VIP a torneios",
-      "Suíte avançada de análises",
-      "Sessões mensais de coaching",
-      "Canal privado no discord",
-      "Emblema de perfil personalizado",
-    ],
-    color: "from-regal-gold/20 via-orange-500/20 to-regal-gold/20",
-    colorHover: "from-regal/30 via-regal-gold/30 to-regal/30",
   },
 ];
 
@@ -74,15 +45,15 @@ const Pricing = () => {
         >
           <h2 className="text-3xl md:text-5xl font-cinzel font-bold mb-6">
             <span className="bg-gradient-to-r from-regal-gold via-white to-regal-gold bg-clip-text text-transparent">
-              Escolha Seu Caminho
+            Junte-se a Batalha
             </span>
           </h2>
           <p className="text-lg text-gray-300 font-space max-w-2xl mx-auto">
-            Selecione o plano perfeito para aprimorar sua jornada de jogo
+          Entre na Arena e se torne Campeão
           </p>
         </motion.div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-1 lg:grid-cols-1 max-w-7xl mx-auto justify-center">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -90,7 +61,7 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="relative group"
+              className="relative group max-w-md mx-auto w-full"
             >
               {/* Cartão */}
               <div className="relative h-full p-8 bg-black/50 backdrop-blur-sm rounded-xl border border-gray-800 overflow-hidden">
@@ -101,7 +72,7 @@ const Pricing = () => {
                 <div className="absolute inset-[1px] bg-black rounded-xl" />
 
                 {/* Conteúdo */}
-                <div className="relative z-10">
+                <div className="relative">
                   <div className="flex items-center justify-between mb-4">
                     <motion.div
                       whileHover={{ rotate: 360 }}
@@ -136,11 +107,11 @@ const Pricing = () => {
                     ))}
                   </ul>
 
-                  <Button
-                    className={`w-full bg-gradient-to-r ${plan.colorHover} text-white hover:brightness-110 transition-all duration-300`}
-                  >
-                    Escolher {plan.name}
-                  </Button>
+                  <AnimatedButton2
+                    text={`Escolher ${plan.name}`}
+                    onClick={() => window.location.href = 'https://www.google.com.br'}
+                    className={`w-full relative z-[100] bg-gradient-to-r ${plan.colorHover} text-white hover:brightness-110 transition-all duration-300`}
+                  />
                 </div>
               </div>
 

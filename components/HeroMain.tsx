@@ -137,14 +137,14 @@ const HeroMain: FC<HeroMainProps> = ({
           />
         </div>
               <span className="block mt-2 text-2xl bg-gradient-to-r from-regal-gold via-white to-regal-gold bg-clip-text text-transparent">
-                Defenda suas Palavras
+              Seu esforço vale dinheiro
               </span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-300 
                           font-space max-w-2xl mx-auto 
                           leading-relaxed">
-              Aprenda a falar qualquer idioma de forma natural e eficiente com uma metodologia inovadora que garante fluência conversacional em apenas 3 meses! E o melhor: você pode estudar mais de um idioma ao mesmo tempo!
+              Aprenda a falar qualquer idioma de forma natural e eficiente com uma metodologia inovadora que garante fluência conversacional em apenas 3 meses! E o melhor: ganhe dinheiro e prêmios para fazer isso!
             </p>
 
             {/* Exibição interativa de palavra estilo Hangman */}

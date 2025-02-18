@@ -1,0 +1,48 @@
+const plans = [
+  {
+    name: "Escudeiro",
+    icon: Shield,
+    price: "19",
+    description: "Perfeito para iniciantes começando sua jornada",
+    features: [
+      "Guias básicos de estratégia",
+      "Acesso ao fórum da comunidade",
+      "Torneios semanais",
+      "Análises básicas",
+    ],
+    color: "from-blue-500/20 via-purple-500/20 to-blue-500/20",
+    colorHover: "from-regal/30 via-regal-gold/30 to-regal/30",
+  },
+  {
+    name: "Cavaleiro",
+    icon: Sword,
+    price: "49",
+    description: "Para jogadores dedicados que buscam maestria",
+    features: [
+      "Guias avançados de estratégia",
+      "Entrada prioritária em torneios",
+      "Painel de estatísticas pessoais",
+      "Sessão de coaching individual",
+      "Acesso premium ao discord",
+    ],
+    color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
+    colorHover: "from-regal-gold/30 via-orange-500/30 to-regal-gold/30",
+    popular: true,
+  },
+  {
+    name: "Rei",
+    icon: Crown,
+    price: "99",
+    description: "Pacote definitivo para jogadores profissionais",
+    features: [
+      "Base de estratégias de elite",
+      "Acesso VIP a torneios",
+      "Suíte avançada de análises",
+      "Sessões mensais de coaching",
+      "Canal privado no discord",
+      "Emblema de perfil personalizado",
+    ],
+    color: "from-regal-gold/20 via-orange-500/20 to-regal-gold/20",
+    colorHover: "from-regal/30 via-regal-gold/30 to-regal/30",
+  },
+];

@@ -2,25 +2,35 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sword } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
 interface AnimatedButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const AnimatedButton = ({
-  text = "Iniciar Jornada",
+const AnimatedButton2 = ({
+  text = "Escolher Cavaleiro",
   className,
+  onClick,
   ...props
 }: AnimatedButtonProps) => {
   const [isSliced, setIsSliced] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const router = useRouter();
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (!isSliced) {
-      setIsSliced(true);
-      setTimeout(() => setIsSliced(false), 1000);
+    // Slice animation
+    setIsSliced(true);
+    setTimeout(() => setIsSliced(false), 1000);
+
+    // Direct click handler
+    if (onClick) {
+      onClick(e);
+    } else {
+      // Fallback redirect
+      window.location.href = 'https://www.google.com.br';
     }
-    props.onClick?.(e);
   };
 
   return (
@@ -78,12 +88,13 @@ const AnimatedButton = ({
         } : {}}
       >
         <button
+          type="button"
           {...props}
           onClick={handleClick}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           className={cn(
-            "relative group py-4 px-8 rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 disabled:opacity-50 disabled:pointer-events-none shadow-[0_15px_25px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_30px_rgba(0,0,0,0.6)] transition-shadow duration-300",
+            "relative group py-4 px-8 w-full rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:pointer-events-none shadow-[0_15px_25px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_30px_rgba(0,0,0,0.6)] cursor-pointer",
             className
           )}
         >
@@ -176,7 +187,7 @@ const AnimatedButton = ({
           />
 
           {/* Button content */}
-          <div className="relative z-10 flex items-center justify-center gap-2">
+          <div className="relative z-100 flex items-center justify-center gap-2">
             <span className="font-cinzel font-bold text-white hover:text-regal text-shadow-[0_0_10px_rgba(255,215,0,0.7)]">
               {isSliced ? (
                 <div className="flex gap-4">
@@ -225,4 +236,4 @@ const AnimatedButton = ({
   );
 };
 
-export default AnimatedButton;
+export default AnimatedButton2;

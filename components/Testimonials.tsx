@@ -34,11 +34,11 @@ const depoimentos = [
 
 const Depoimentos = () => {
   return (
-    <section className="relative py-20 bg-gradient-to-br from-black via-regal-gold/30 to-black overflow-hidden">
+    <section className="relative py-20 bg-gradient-to-br from-black via-regal-gold/70 to-black overflow-hidden">
       {/* Efeitos de fundo */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-black opacity-90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-regal-gold/20 to-transparent animate-pulse" />
+        <div className="absolute inset-0 bg-black opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent animate-pulse" />
       </div>
 
       <div className="relative container mx-auto px-4">

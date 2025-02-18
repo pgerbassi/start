@@ -6,7 +6,7 @@ const features = [
   {
     icon: Gamepad2,
     title: "Jogabilidade Imersiva",
-    description: "Experimente a estratégia medieval como nunca antes, com mecânicas de jogo de ponta."
+    description: "Experimente o Sistema de Ranks como nunca antes, com Mecânicas de Jogo de Ponta."
   },
   {
     icon: Users,
@@ -27,11 +27,11 @@ const features = [
 
 const Platform = () => {
   return (
-    <section className="relative min-h-screen py-20 bg-gradient-to-br from-black via-regal/20 to-black overflow-hidden">
+    <section className="relative min-h-screen py-20 bg-gradient-to-br from-black via-regal-gold/5 to-black overflow-hidden">
       {/* Efeito de fundo animado */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-black opacity-90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-regal-gold/10 to-transparent animate-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-t from-regal/10 via-regal/20 to-transparent animate-pulse" />
       </div>
 
       <div className="relative container mx-auto px-4">
@@ -44,11 +44,11 @@ const Platform = () => {
         >
           <h2 className="text-3xl md:text-5xl font-cinzel font-bold mb-6">
             <span className="bg-gradient-to-r from-regal-gold via-white to-regal-gold bg-clip-text text-transparent">
-              Bem-vindo ao Futuro
+            Explore a Arena
             </span>
           </h2>
           <p className="text-lg text-gray-300 font-space max-w-2xl mx-auto mb-12">
-            Onde a estratégia medieval encontra a tecnologia de ponta
+          Entenda como ganhar Pontos e subir no Rank
           </p>
 
           {/* Espaço reservado para vídeo */}

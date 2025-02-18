@@ -1,37 +1,25 @@
 import { motion } from "framer-motion";
-import { CircuitBoard, Cog, Database, Server, Workflow } from "lucide-react";
+import { CircuitBoard, LandPlot, Database, ChevronsUp, Workflow } from "lucide-react";
 
 const methods = [
   {
-    icon: Workflow,
-    title: "Planejamento Estratégico",
-    description: "Nossos algoritmos avançados analisam seus padrões de jogo para fornecer estratégias personalizadas de aprimoramento.",
+    icon: LandPlot,
+    title: "Método Arena",
+    description: "No Método Arena, conforme os jogadores avançam nas classificações e alcançam ranks mais altos, eles ganharão prêmios valiosos, como dinheiro e viagens.",
     color: "from-regal-500 to-regal-700"
   },
   {
     icon: CircuitBoard,
-    title: "Integração de IA",
-    description: "Sistemas de inteligência artificial de ponta que se adaptam continuamente para aprimorar sua experiência de jogo.",
+    title: "Método DualFlow",
+    description: "O Método DualFlow é uma abordagem inovadora para o aprendizado de idiomas, que integra a inteligência artificial para oferecer uma experiência personalizada e altamente eficaz.",
     color: "from-regal-700 to-regal-900"
   },
   {
-    icon: Database,
-    title: "Análise de Dados",
-    description: "Rastreamento de desempenho em tempo real e estatísticas detalhadas para ajudar você a tomar decisões informadas.",
+    icon: ChevronsUp,
+    title: "Método Boost",
+    description: "O Método Boost é uma técnica de aprendizado que utiliza planilhas para aplicar a estratégia de repetição espaçada, um método comprovado para melhorar a retenção de informações ao longo do tempo.",
     color: "from-regal-900 to-regal-gold/50"
   },
-  {
-    icon: Server,
-    title: "Infraestrutura em Nuvem",
-    description: "Arquitetura de nuvem robusta e escalável garantindo jogabilidade suave em todos os dispositivos.",
-    color: "from-regal-gold/50 to-regal-500"
-  },
-  {
-    icon: Cog,
-    title: "Motor de Otimização",
-    description: "Otimização de desempenho contínua para oferecer a melhor experiência de jogo possível.",
-    color: "from-regal-500 to-regal-700"
-  }
 ];
 
 const Methods = () => {
@@ -61,7 +49,7 @@ const Methods = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-300 font-space max-w-2xl mx-auto">
-            Descubra como combinamos tecnologia de ponta com estratégia medieval
+          Descubra como combinamos Aprendizado de Idiomas  com Sistema de Prêmios
           </p>
         </motion.div>
 
