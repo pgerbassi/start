@@ -137,7 +137,7 @@ const Ranking = () => {
                     alt={`${rank.name} Rank`} 
                     width={100} 
                     height={100} 
-                    className="w-16 h-16 object-contain"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className={`

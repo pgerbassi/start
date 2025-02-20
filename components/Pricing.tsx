@@ -5,9 +5,25 @@ import  AnimatedButton2  from "./ui/animated-button-2";
 
 const plans = [
   {
+    name: "Paladino",
+    icon: Sword,
+    price: "157,60",
+    description: "Plano Semestral (20% de desconto) - R$ 945,00 ou 6x de",
+    features: [
+      "Guias avançados de estratégia",
+      "Entrada prioritária em torneios",
+      "Painel de estatísticas pessoais",
+      "Sessão de coaching individual",
+      "Acesso premium ao discord",
+    ],
+    color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
+    colorHover: "from-regal-gold/30 via-orange-500/30 to-regal-gold/30",
+    popular: false,
+  },
+  {
     name: "Cavaleiro",
     icon: Sword,
-    price: "49",
+    price: "197,90",
     description: "Para jogadores dedicados que buscam maestria",
     features: [
       "Guias avançados de estratégia",
@@ -19,6 +35,22 @@ const plans = [
     color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
     colorHover: "from-regal-gold/30 via-orange-500/30 to-regal-gold/30",
     popular: true,
+  },
+  {
+    name: "Rei da Arena",
+    icon: Sword,
+    price: "137,90",
+    description: "Plano Anual (30% de desconto) - R$ 1.654,80 ou 12x de",
+    features: [
+      "Guias avançados de estratégia",
+      "Entrada prioritária em torneios",
+      "Painel de estatísticas pessoais",
+      "Sessão de coaching individual",
+      "Acesso premium ao discord",
+    ],
+    color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
+    colorHover: "from-regal-gold/30 via-orange-500/30 to-regal-gold/30",
+    popular: false,
   },
 ];
 
@@ -53,7 +85,7 @@ const Pricing = () => {
           </p>
         </motion.div>
 
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-1 lg:grid-cols-1 max-w-7xl mx-auto justify-center">
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-3 lg:grid-cols-3 max-w-7xl mx-auto justify-center">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
