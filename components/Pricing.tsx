@@ -5,10 +5,13 @@ import  AnimatedButton2  from "./ui/animated-button-2";
 
 const plans = [
   {
-    name: "Paladino",
+    name: "Cavaleiro",
     icon: Sword,
-    price: "157,60",
-    description: "Plano Semestral (20% de desconto) - R$ 945,00 ou 6x de",
+    price: "197,90",
+    description: "Plano Mensal - Domine a Arena com Estratégias Exclusivas",
+    originalPrice: "R$ 197,90",
+    discountedPrice: null,
+    discountText: null,
     features: [
       "Guias avançados de estratégia",
       "Entrada prioritária em torneios",
@@ -21,16 +24,19 @@ const plans = [
     popular: false,
   },
   {
-    name: "Cavaleiro",
+    name: "Paladino",
     icon: Sword,
-    price: "197,90",
-    description: "Para jogadores dedicados que buscam maestria",
+    price: "157,60",
+    description: "Plano Semestral - Economia e Poder Combinados",
+    originalPrice: "R$ 1.185,60",
+    discountedPrice: "R$ 945,00",
+    discountText: "Economize 20%",
     features: [
-      "Guias avançados de estratégia",
-      "Entrada prioritária em torneios",
-      "Painel de estatísticas pessoais",
-      "Sessão de coaching individual",
-      "Acesso premium ao discord",
+      "Todos os benefícios do Cavaleiro",
+      "Desconto exclusivo de 20%",
+      "Compromisso de 6 meses",
+      "Flexibilidade de pagamento",
+      "Suporte prioritário",
     ],
     color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
     colorHover: "from-regal-gold/30 via-orange-500/30 to-regal-gold/30",
@@ -40,13 +46,16 @@ const plans = [
     name: "Rei da Arena",
     icon: Sword,
     price: "137,90",
-    description: "Plano Anual (30% de desconto) - R$ 1.654,80 ou 12x de",
+    description: "Plano Anual - Domine a Arena com Máximo Benefício",
+    originalPrice: "R$ 2.364,00",
+    discountedPrice: "R$ 1.654,80",
+    discountText: "Economize 30%",
     features: [
-      "Guias avançados de estratégia",
-      "Entrada prioritária em torneios",
-      "Painel de estatísticas pessoais",
-      "Sessão de coaching individual",
-      "Acesso premium ao discord",
+      "Todos os benefícios do Paladino",
+      "Desconto máximo de 30%",
+      "Compromisso de 12 meses",
+      "Acesso antecipado a novos recursos",
+      "Mentoria estratégica exclusiva",
     ],
     color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
     colorHover: "from-regal-gold/30 via-orange-500/30 to-regal-gold/30",
@@ -128,6 +137,17 @@ const Pricing = () => {
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-white">R${plan.price}</span>
                     <span className="text-gray-400">/mês</span>
+                    {plan.discountText && (
+                      <div className="text-regal-gold font-semibold mt-2">
+                        {plan.discountText}
+                      </div>
+                    )}
+                    {plan.originalPrice && plan.discountedPrice && (
+                      <div className="text-gray-400 text-sm mt-1">
+                        <span className="line-through mr-2">{plan.originalPrice}</span>
+                        <span className="text-regal-gold">{plan.discountedPrice}</span>
+                      </div>
+                    )}
                   </div>
 
                   <ul className="space-y-3 mb-8">

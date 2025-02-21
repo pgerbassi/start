@@ -76,7 +76,7 @@ const ranks: RankTier[] = [
     bgTo: "to-purple-700"
   },
   {
-    name: "Lendário",
+    name: "Rei da Arena",
     range: "2501 - 3000",
     color: "text-red-500",
     image: "/rankings/lendario.png",
