@@ -25,7 +25,7 @@ const plans = [
   },
   {
     name: "Paladino",
-    icon: Sword,
+    icon: Shield,
     price: "157,60",
     description: "Plano Semestral - Economia e Poder Combinados",
     originalPrice: "R$ 1.185,60",
@@ -44,7 +44,7 @@ const plans = [
   },
   {
     name: "Rei da Arena",
-    icon: Sword,
+    icon: Crown,
     price: "137,90",
     description: "Plano Anual - Domine a Arena com Máximo Benefício",
     originalPrice: "R$ 2.364,00",
