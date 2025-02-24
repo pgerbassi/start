@@ -41,6 +41,10 @@ body {
   @apply animate-tech-pulse;
 }
 
+.glow-effect {
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
 /* Typography Styles */
 h1, h2, h3 {
   font-family: 'Cinzel', serif;

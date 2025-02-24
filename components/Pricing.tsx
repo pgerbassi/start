@@ -14,9 +14,6 @@ const plans = [
     discountText: null,
     features: [
       "Guias avançados de estratégia",
-      "Entrada prioritária em torneios",
-      "Painel de estatísticas pessoais",
-      "Sessão de coaching individual",
       "Acesso premium ao discord",
     ],
     color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
@@ -36,7 +33,6 @@ const plans = [
       "Desconto exclusivo de 20%",
       "Compromisso de 6 meses",
       "Flexibilidade de pagamento",
-      "Suporte prioritário",
     ],
     color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
     colorHover: "from-regal-gold/30 via-orange-500/30 to-regal-gold/30",
@@ -45,17 +41,15 @@ const plans = [
   {
     name: "Rei da Arena",
     icon: Crown,
-    price: "137,90",
+    price: "165,15",
     description: "Plano Anual - Domine a Arena com Máximo Benefício",
     originalPrice: "R$ 2.364,00",
     discountedPrice: "R$ 1.654,80",
     discountText: "Economize 30%",
     features: [
       "Todos os benefícios do Paladino",
-      "Desconto máximo de 30%",
+      "Desconto Exclusivo",
       "Compromisso de 12 meses",
-      "Acesso antecipado a novos recursos",
-      "Mentoria estratégica exclusiva",
     ],
     color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
     colorHover: "from-regal-gold/30 via-orange-500/30 to-regal-gold/30",
@@ -138,7 +132,7 @@ const Pricing = () => {
                     <span className="text-4xl font-bold text-white">R${plan.price}</span>
                     <span className="text-gray-400">/mês</span>
                     {plan.discountText && (
-                      <div className="text-regal-gold font-semibold mt-2">
+                      <div className="text-regal-gold font-bold text-3xl mt-2 bg-black/70 p-0 rounded">
                         {plan.discountText}
                       </div>
                     )}
@@ -158,12 +152,13 @@ const Pricing = () => {
                       </li>
                     ))}
                   </ul>
-
+                  <div className="w-full z-50">
                   <AnimatedButton2
                     text={`Escolher ${plan.name}`}
                     onClick={() => window.location.href = 'https://www.google.com.br'}
                     className={`w-full relative z-[100] bg-gradient-to-r ${plan.colorHover} text-white hover:brightness-110 transition-all duration-300`}
                   />
+                  </div>
                 </div>
               </div>
 

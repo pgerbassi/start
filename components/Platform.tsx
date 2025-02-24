@@ -59,17 +59,27 @@ const Platform = () => {
             className="relative max-w-4xl mx-auto mb-20 rounded-xl overflow-hidden border border-regal-gold/30 bg-black/50"
           >
             <div className="aspect-video bg-black/80 flex items-center justify-center">
-              <p className="text-regal-gold/60 font-space">Vídeo do YouTube em breve</p>
+            <div className="relative z-10 w-full aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/z48BonBn0Yk?autoplay=0&modestbranding=1&rel=0"
+                title="Language Arena Presentation"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full"
+              />
+            </div>
             </div>
             {/* Efeito de brilho */}
             <div className="absolute -inset-2 bg-regal-gold/20 blur-xl opacity-50" />
           </motion.div>
+          <a href="https://pay.hotmart.com/F98257568Y?off=l6vc739h&bid=1740409540686" target="_blank" rel="noopener noreferrer">
           <AnimatedButton
             onClick={(e) => {
               e.stopPropagation();
               console.log("Animated button clicked!");
             }}
           />
+          </a>
           {/* Grade de Recursos */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {features.map((feature, index) => (

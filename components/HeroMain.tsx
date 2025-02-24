@@ -28,6 +28,7 @@ const HeroMain: FC<HeroMainProps> = ({
   const [wordDisplay, setWordDisplay] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const revealNextLetter = useCallback(() => {
     if (currentIndex < revealWord.length && !isAnimating) {
@@ -60,6 +61,17 @@ const HeroMain: FC<HeroMainProps> = ({
   const handleHeroClick = () => {
     revealNextLetter();
   };
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Adjust the width as needed
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Call on mount
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div 
@@ -166,12 +178,10 @@ const HeroMain: FC<HeroMainProps> = ({
             </div>*/}
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 pb-12">
-            <AnimatedButton
-              onClick={(e) => {
-                e.stopPropagation();
-                console.log("Animated button clicked!");
-              }}
-            />
+              <a href="https://pay.hotmart.com/F98257568Y?off=l6vc739h&bid=1740409540686" target="_blank" rel="noopener noreferrer">
+            {!isMobile && <AnimatedButton
+              href="" rel="noopener noreferrer" target="_blank"
+            />}</a>
               {/*<button 
                 className="medieval-btn group relative px-8 py-4 mb-8 bg-regal-gold text-black font-medievaltech font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,215,0,0.5)]"
                 onClick={e => e.stopPropagation()} // Prevenir tratador de clique do herói
@@ -196,11 +206,11 @@ const HeroMain: FC<HeroMainProps> = ({
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex items-center justify-center">
+        <div className="w-full md:w-1/2 flex items-center justify-center -mt-8 md:mt-0 lg:mt-0">
           <div className="w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl border-4 border-regal-gold/30">
             <div className="relative w-full aspect-video">
               <iframe
-                src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=0&modestbranding=1&rel=0"
+                src="https://www.youtube.com/embed/o1s5AK8qsS0?autoplay=0&modestbranding=1&rel=0"
                 title="Language Arena Presentation"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -208,6 +218,12 @@ const HeroMain: FC<HeroMainProps> = ({
               />
             </div>
           </div>
+        </div>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-14 pb-8 z-10">
+        <a href="https://pay.hotmart.com/F98257568Y?off=l6vc739h&bid=1740409540686" target="_blank" rel="noopener noreferrer">
+            {isMobile && <AnimatedButton
+              href="" rel="noopener noreferrer" target="_blank"
+            />}</a>
         </div>
       </div>
       

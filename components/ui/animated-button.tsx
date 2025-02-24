@@ -5,11 +5,19 @@ import { cn } from "@/lib/utils";
 
 interface AnimatedButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  href?: string;
+  target?: string;
+  rel?: string;    
 }
 
 const AnimatedButton = ({
   text = "Iniciar Jornada",
   className,
+  onClick,
+  href,
+  target,
+  rel,
   ...props
 }: AnimatedButtonProps) => {
   const [isSliced, setIsSliced] = useState(false);
@@ -19,9 +27,12 @@ const AnimatedButton = ({
     if (!isSliced) {
       setIsSliced(true);
       setTimeout(() => setIsSliced(false), 1000);
+      if (onClick) {
+        onClick(e);
+      }
     }
-    props.onClick?.(e);
   };
+  
 
   return (
     <div className="relative py-0 px-0">
@@ -85,7 +96,7 @@ const AnimatedButton = ({
           className={cn(
             "relative group py-4 px-8 rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 disabled:opacity-50 disabled:pointer-events-none shadow-[0_15px_25px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_30px_rgba(0,0,0,0.6)] transition-shadow duration-300",
             className
-          )}
+          )} 
         >
           {/* Dark 3D Shadow Effect */}
           <motion.div

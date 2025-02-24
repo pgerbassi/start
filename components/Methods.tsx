@@ -103,6 +103,12 @@ const Methods = () => {
             </motion.div>
           ))}
         </div>
+        <div className="text-6xl font-bold text-center text-regal-gold mt-4 glow-effect">
+          <div className="pt-10">
+          +3
+          </div>
+
+        </div>
       </div>
 
       {/* Elementos decorativos */}

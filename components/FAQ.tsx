@@ -14,11 +14,11 @@ const faqs = [
   },
   {
     question: "O que torna nosso método de treinamento único?",
-    answer: "Nosso método de treinamento combina tecnologia de ponta com coaching personalizado. Usamos análises avançadas para acompanhar seu progresso e adaptar o programa de treinamento às suas necessidades e objetivos específicos."
+    answer: "Nosso método de treinamento combina tecnologia de ponta com aulas ao vivo diárias. Usamos análises avançadas para acompanhar seu progresso e adaptar o programa de treinamento às suas necessidades e objetivos específicos."
   },
   {
     question: "Com que frequência são adicionados novos materiais de treinamento?",
-    answer: "Atualizamos nossos materiais de treinamento semanalmente, incluindo novas estratégias, tutoriais e exercícios de prática. Nosso conteúdo está em constante evolução para acompanhar o meta de jogos mais recente e as técnicas atuais."
+    answer: "Atualizamos nossos materiais de treinamento semanalmente, incluindo novas estratégias, tutoriais e exercícios de prática. Nosso conteúdo está em constante evolução para acompanhar novas tecnologias e técnicas atuais."
   },
   {
     question: "Posso mudar entre os níveis de associação?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "Vocês oferecem reembolsos?",
-    answer: "Oferecemos uma garantia de devolução de dinheiro de 14 dias para todas as novas associações. Se você não estiver satisfeito com nosso serviço dentro deste período, pode solicitar um reembolso completo, sem perguntas."
+    answer: "Oferecemos uma garantia de devolução de dinheiro de 7 dias para todas as novas associações. Se você não estiver satisfeito com nosso serviço dentro deste período, pode solicitar um reembolso completo, sem perguntas."
   }
 ];
 

@@ -211,12 +211,14 @@ const Ranking = () => {
       <div className="absolute top-10 left-10 w-32 h-32 bg-gray-800/5 rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-10 w-32 h-32 bg-gray-800/5 rounded-full blur-3xl" />
       <div className="container mx-auto px-4 text-center justify-center items-center content-center ">
+      <a href="https://pay.hotmart.com/F98257568Y?off=l6vc739h&bid=1740409540686" target="_blank" rel="noopener noreferrer">
       <AnimatedButton className="bg-gradient-to-r from-regal-gold/70 via-regal/50 to-regal-gold/70"
         onClick={(e) => {
           e.stopPropagation();
           console.log("Animated button clicked!");
         }}
       />
+      </a>
       </div>
     </section>
   );

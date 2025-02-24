@@ -163,12 +163,14 @@ const Prizes = () => {
             ))}
         </div>
         <div className="flex justify-center items-center pt-10">
+        <a href="https://pay.hotmart.com/F98257568Y?off=l6vc739h&bid=1740409540686" target="_blank" rel="noopener noreferrer">
         <AnimatedButton className=""
         onClick={(e) => {
           e.stopPropagation();
           console.log("Animated button clicked!");
         }}
       />
+      </a>
       </div>
       </div>
 
