@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Check, Crown, Sword, Shield } from "lucide-react";
 import  AnimatedButton2  from "./ui/animated-button-2";
+import  AnimatedButton  from "./ui/animated-button";
 
 const plans = [
   {
@@ -19,6 +20,7 @@ const plans = [
     color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
     colorHover: "from-regal-gold/30 via-orange-500/30 to-regal-gold/30",
     popular: false,
+    link: "https://pay.hotmart.com/F98257568Y?off=l6vc739h&bid=1740409540686",
   },
   {
     name: "Paladino",
@@ -37,11 +39,12 @@ const plans = [
     color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
     colorHover: "from-regal-gold/30 via-orange-500/30 to-regal-gold/30",
     popular: true,
+    link: "https://pay.hotmart.com/F98257568Y?off=qaj4s4os&bid=1740412003777",
   },
   {
     name: "Rei da Arena",
     icon: Crown,
-    price: "165,15",
+    price: "137,85",
     description: "Plano Anual - Domine a Arena com Máximo Benefício",
     originalPrice: "R$ 2.364,00",
     discountedPrice: "R$ 1.654,80",
@@ -54,6 +57,7 @@ const plans = [
     color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
     colorHover: "from-regal-gold/30 via-orange-500/30 to-regal-gold/30",
     popular: false,
+    link: "https://pay.hotmart.com/F98257568Y?off=xrxz2aid&bid=1740411969148",
   },
 ];
 
@@ -88,7 +92,7 @@ const Pricing = () => {
           </p>
         </motion.div>
 
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-3 lg:grid-cols-3 max-w-7xl mx-auto justify-center">
+        <div className="grid gap-24 md:gap-10 lg:gap-10 grid-cols-1 md:grid-cols-3 lg:grid-cols-3 max-w-7xl mx-auto justify-center">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -99,7 +103,7 @@ const Pricing = () => {
               className="relative group max-w-md mx-auto w-full"
             >
               {/* Cartão */}
-              <div className="relative h-full p-8 bg-black/50 backdrop-blur-sm rounded-xl border border-gray-800 overflow-hidden">
+              <div className="relative h-full p-8 -mb-2 pb-10 bg-black/50 backdrop-blur-sm rounded-xl border border-gray-800 overflow-hidden">
                 {/* Efeito de borda animada */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-r ${plan.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
@@ -152,15 +156,18 @@ const Pricing = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="w-full z-50">
-                  <AnimatedButton2
-                    text={`Escolher ${plan.name}`}
-                    onClick={() => window.location.href = 'https://www.google.com.br'}
-                    className={`w-full relative z-[100] bg-gradient-to-r ${plan.colorHover} text-white hover:brightness-110 transition-all duration-300`}
-                  />
-                  </div>
+
                 </div>
               </div>
+              <div className=" absolute w-full z-50 -pt-0">
+                  <a href={plan.link} target="_blank" rel="noopener noreferrer">
+                  <AnimatedButton
+                    text={`Escolher ${plan.name}`}
+                    className={`w-full relative z-50 cursor-pointer pointer-events-auto bg-gradient-to-r ${plan.colorHover} text-white hover:brightness-110 transition-all duration-300`}
+                  />
+                  </a>
+                  </div>
+
 
               {/* Efeito de brilho ao passar o mouse */}
               <div
