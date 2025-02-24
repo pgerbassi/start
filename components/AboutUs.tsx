@@ -40,7 +40,7 @@ const AboutUs = () => {
                   className="relative w-48 h-48 mx-auto"
                 >
                   <Avatar className="w-48 h-48 border-4 border-regal-500/30">
-                    <AvatarImage src="/vitor.jpeg" alt="Vitor" className="object-cover" />
+                    <AvatarImage src="/vitor.jpeg" alt="Vitor" className="object-cover object-[45%_65%]" />
                     <AvatarFallback className="bg-regal-900/30">
                       <Globe className="w-20 h-20 text-regal-400" />
                     </AvatarFallback>
