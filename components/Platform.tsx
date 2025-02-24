@@ -27,7 +27,7 @@ const features = [
 
 const Platform = () => {
   return (
-    <section className="relative min-h-screen py-20 bg-gradient-to-br from-black via-regal-gold/5 to-black overflow-hidden">
+    <section className="relative min-h-screen pt-14 pb-2 md:py-20 lg:py-20 bg-gradient-to-br from-black via-regal-gold/5 to-black overflow-hidden">
       {/* Efeito de fundo animado */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-black opacity-90" />
