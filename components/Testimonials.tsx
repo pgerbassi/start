@@ -50,7 +50,7 @@ const Depoimentos = () => {
         >
           <h2 className="text-3xl md:text-5xl font-cinzel font-bold mb-6">
             <span className="bg-gradient-to-r from-regal-gold via-white to-regal-gold bg-clip-text text-transparent">
-              Depoimentos de Jogadores
+              Depoimentos de Alunos
             </span>
           </h2>
           <p className="text-lg text-gray-300 font-space max-w-2xl mx-auto">
@@ -82,7 +82,7 @@ const Depoimentos = () => {
                         title={`Depoimento de ${depoimento.name}`}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
-                        className="w-full h-full z-10 relative"
+                        className="w-full h-full z-30 relative"
                       />
                       {/* Overlay para melhorar interatividade */}
                       <a 

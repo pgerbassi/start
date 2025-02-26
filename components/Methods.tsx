@@ -45,11 +45,11 @@ const Methods = () => {
         >
           <h2 className="text-3xl md:text-5xl font-cinzel font-bold mb-6">
             <span className="bg-gradient-to-r from-regal-gold via-white to-regal-gold bg-clip-text text-transparent">
-              Nossos Métodos
+              Meus Métodos
             </span>
           </h2>
           <p className="text-lg text-gray-300 font-space max-w-2xl mx-auto">
-          Descubra como combinamos Aprendizado de Idiomas  com Sistema de Prêmios
+          Descubra o método que eu desenvolvi para aprender idiomas e como você pode ganhar dinheiro com isso.
           </p>
         </motion.div>
 

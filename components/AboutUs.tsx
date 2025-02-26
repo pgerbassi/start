@@ -58,22 +58,22 @@ const AboutUs = () => {
               >
                 <div className="bg-regal-900/20 backdrop-blur-sm border border-regal-500/20 rounded-xl p-6">
                   <div className="flex items-center gap-4 mb-4">
-                    <Languages className="w-8 h-8 text-regal-400" />
-                    <h3 className="text-2xl font-cinzel font-bold text-regal-300">
+                    <Languages className="w-8 h-8 text-regal-gold" />
+                    <h3 className="text-2xl font-cinzel font-bold text-regal-gold glow-effect">
                       Vitor Piana
                     </h3>
                   </div>
-                  <p className="text-gray-400 font-space">
-                  Vitor é um Hiperpoliglota apaixonado por aprendizagem de idiomas que revolucionou a maneira de como estudar uma nova lingua.
+                  <p className="text-white font-space">
+                  Eu sou um Hiperpoliglota apaixonado por aprendizagem de idiomas que revolucionou a maneira de como estudar uma nova lingua.
                   </p>
                 </div>
 
                 <div className="bg-regal-900/20 backdrop-blur-sm border border-regal-500/20 rounded-xl p-6">
-                  <h4 className="text-xl font-cinzel font-bold text-regal-300 mb-2">
+                  <h4 className="text-xl font-cinzel font-bold text-regal-gold mb-2 glow-effect">
                     Anos de Experiência
                   </h4>
-                  <p className="text-gray-400 font-space">
-                  Descubra o método que o fez aprender mais de 40 idiomas aos 20 anos e que pode transformar você em um hiperpoliglota.
+                  <p className="text-white font-space">
+                  Descubra o método que eu fiz para aprender mais de 40 idiomas aos 20 anos e que pode transformar você em um hiperpoliglota.
                   </p>
                 </div>
               </motion.div>
@@ -87,7 +87,7 @@ const AboutUs = () => {
               className="relative"
             >
               <div className="bg-black/50 backdrop-blur-sm border border-regal-500/20 rounded-xl p-6">
-                <h3 className="text-2xl font-cinzel font-bold text-regal-300 mb-4">
+                <h3 className="text-2xl font-cinzel font-bold text-regal-gold glow-effect mb-4">
                 Proficiência Linguística
                 </h3>
                 
@@ -102,7 +102,7 @@ const AboutUs = () => {
                         className="group relative"
                       >
                         <div className="bg-regal-900/20 rounded-lg p-2 hover:bg-regal-900/30 transition-colors">
-                          <p className="text-gray-400 group-hover:text-regal-300 transition-colors">
+                          <p className="text-white group-hover:text-regal-gold transition-colors">
                             {language}
                           </p>
                         </div>

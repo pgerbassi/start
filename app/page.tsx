@@ -27,8 +27,8 @@ export default function Home() {
       <HeroMain />
           <AboutUs />
           <Platform />
-          <Methods />
           <Testimonials />
+          <Methods />
           <Ranking />
           <Prizes />
           <Pricing />

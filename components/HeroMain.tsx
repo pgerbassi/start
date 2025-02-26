@@ -122,7 +122,7 @@ const HeroMain: FC<HeroMainProps> = ({
                       flex flex-col md:flex-row items-center justify-between min-h-screen mt-8">
         <div className="text-center md:text-left space-y-8 max-w-2xl w-full md:w-1/2">
           <div className="text-center space-y-8 max-w-4xl mx-auto">
-            <div className="inline-block">
+            {/*<div className="inline-block">
               <span className="inline-block px-4 py-1.5 rounded-full 
                                text-xs md:text-sm font-medievaltech font-medium 
                                bg-regal/20 text-regal-gold 
@@ -130,7 +130,7 @@ const HeroMain: FC<HeroMainProps> = ({
                                animate-medieval-shimmer">
                 Bem-vindo à Arena
               </span>
-            </div>
+            </div> */}
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl 
                            font-cinzel font-bold text-foreground 
@@ -145,18 +145,18 @@ const HeroMain: FC<HeroMainProps> = ({
             alt="Language Arena Logo" 
             width={450} 
             height={400} 
-            className="transition-transform w-[60vw] h-[10vh] md:w-[25vw] md:h-[20vh] duration-300 opacity-95 hover:scale-110 mb-8"
+            className="transition-transform w-[50vw] h-[8vh] md:w-[20vw] md:h-[15vh] duration-300 opacity-95 hover:scale-110 mb-8 -mt-10"
           />
         </div>
               <span className="block mt-2 text-2xl bg-gradient-to-r from-regal-gold via-white to-regal-gold bg-clip-text text-transparent">
-              Seu esforço vale dinheiro
+              Aprenda Qualquer Idioma em 3 meses
               </span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-300 
                           font-space max-w-2xl mx-auto 
                           leading-relaxed">
-              Aprenda a falar qualquer idioma de forma natural e eficiente com uma metodologia inovadora que garante fluência conversacional em apenas 3 meses! E o melhor: ganhe dinheiro e prêmios para fazer isso!
+              Descubra o segredo que me permitiu aprender 40 idiomas com apenas 20 anos.
             </p>
 
             {/* Exibição interativa de palavra estilo Hangman */}

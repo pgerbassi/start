@@ -84,7 +84,7 @@ const Pricing = () => {
         >
           <h2 className="text-3xl md:text-5xl font-cinzel font-bold mb-6">
             <span className="bg-gradient-to-r from-regal-gold via-white to-regal-gold bg-clip-text text-transparent">
-            Junte-se a Batalha
+            Junte-se à Turma
             </span>
           </h2>
           <p className="text-lg text-gray-300 font-space max-w-2xl mx-auto">

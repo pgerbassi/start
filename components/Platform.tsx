@@ -81,6 +81,7 @@ const Platform = () => {
           />
           </a>
           {/* Grade de Recursos */}
+          {/*
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {features.map((feature, index) => (
               <motion.div
@@ -92,7 +93,7 @@ const Platform = () => {
                 className="group relative"
               >
                 <div className="relative p-6 bg-black/50 backdrop-blur-sm rounded-xl border border-regal-gold/20 overflow-hidden">
-                  {/* Efeito de hover */}
+                  {/* Efeito de hover 
                   <div className="absolute inset-0 bg-gradient-to-b from-regal-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
                   <div className="relative z-10">
@@ -111,7 +112,7 @@ const Platform = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </motion.div>
       </div>
 
