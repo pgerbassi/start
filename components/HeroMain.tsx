@@ -75,7 +75,7 @@ const HeroMain: FC<HeroMainProps> = ({
 
   return (
     <div 
-      className={`relative min-h-screen w-full overflow-hidden 
+      className={`relative max-h-screen md:min-h-screen w-full overflow-hidden 
                   bg-gradient-to-br from-background via-regal to-background 
                   cursor-pointer  ${className}`}
       onClick={handleHeroClick}
@@ -118,7 +118,7 @@ const HeroMain: FC<HeroMainProps> = ({
       </div>
       
       {/* Existing content - adjust top margin to account for header */}
-      <div className="relative container mx-auto px-4 py-12 md:py-0
+      <div className="relative container mx-auto px-4 py-12 pt-14 md:pt-0 md:py-0
                       flex flex-col md:flex-row items-center justify-between min-h-screen mt-8">
         <div className="text-center md:text-left space-y-8 max-w-2xl w-full md:w-1/2">
           <div className="text-center space-y-8 max-w-4xl mx-auto">
@@ -145,15 +145,15 @@ const HeroMain: FC<HeroMainProps> = ({
             alt="Language Arena Logo" 
             width={450} 
             height={400} 
-            className="transition-transform w-[50vw] h-[8vh] md:w-[20vw] md:h-[15vh] duration-300 opacity-95 hover:scale-110 mb-8 -mt-10"
+            className="transition-transform w-[50vw] h-[8vh] md:w-[20vw] md:h-[15vh] duration-300 opacity-95 hover:scale-110 mb-16 md:mb-8 -mt-10"
           />
         </div>
-              <span className="block mt-2 text-2xl bg-gradient-to-r from-regal-gold via-white to-regal-gold bg-clip-text text-transparent">
+              <span className="block mt-2 text-2xl bg-gradient-to-r from-regal-gold via-white to-regal-gold glow-effect bg-clip-text text-transparent">
               Aprenda Qualquer Idioma em 3 meses
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-300 
+            <p className="text-lg md:text-xl text-white 
                           font-space max-w-2xl mx-auto 
                           leading-relaxed">
               Descubra o segredo que me permitiu aprender 40 idiomas com apenas 20 anos.
@@ -206,7 +206,7 @@ const HeroMain: FC<HeroMainProps> = ({
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex items-center justify-center -mt-8 md:mt-0 lg:mt-0">
+        <div className="w-full md:w-1/2 flex items-center justify-center -mt-7 md:mt-0 lg:mt-0">
           <div className="w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl border-4 border-regal-gold/30">
             <div className="relative w-full aspect-video">
               <iframe
@@ -219,7 +219,7 @@ const HeroMain: FC<HeroMainProps> = ({
             </div>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-14 pb-8 z-10">
+        <div className="flex flex-col sm:flex-row gap-0 justify-center mt-24 mb-60 z-10">
         <a href="https://pay.hotmart.com/F98257568Y?off=l6vc739h&bid=1740409540686" target="_blank" rel="noopener noreferrer">
             {isMobile && <AnimatedButton
               href="" rel="noopener noreferrer" target="_blank"

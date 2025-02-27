@@ -19,51 +19,14 @@ const plans = [
     ],
     color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
     colorHover: "from-regal-gold/30 via-orange-500/30 to-regal-gold/30",
-    popular: false,
-    link: "https://pay.hotmart.com/F98257568Y?off=l6vc739h&bid=1740409540686",
-  },
-  {
-    name: "Paladino",
-    icon: Shield,
-    price: "173,92",
-    description: "Plano Semestral - Economia e Poder Combinados",
-    originalPrice: "R$ 1.185,60",
-    discountedPrice: "R$ 945,00",
-    discountText: "Economize 20%",
-    features: [
-      "Todos os benefícios do Cavaleiro",
-      "Desconto exclusivo de 20%",
-      "Compromisso de 6 meses",
-      "Flexibilidade de pagamento",
-    ],
-    color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
-    colorHover: "from-regal-gold/30 via-orange-500/30 to-regal-gold/30",
     popular: true,
-    link: "https://pay.hotmart.com/F98257568Y?off=qaj4s4os&bid=1740412003777",
-  },
-  {
-    name: "Rei da Arena",
-    icon: Crown,
-    price: "165,15",
-    description: "Plano Anual - Domine a Arena com Máximo Benefício",
-    originalPrice: "R$ 2.364,00",
-    discountedPrice: "R$ 1.654,80",
-    discountText: "Economize 30%",
-    features: [
-      "Todos os benefícios do Paladino",
-      "Desconto Exclusivo",
-      "Compromisso de 12 meses",
-    ],
-    color: "from-purple-500/20 via-regal-gold/20 to-purple-500/20",
-    colorHover: "from-regal-gold/30 via-orange-500/30 to-regal-gold/30",
-    popular: false,
-    link: "https://pay.hotmart.com/F98257568Y?off=xrxz2aid&bid=1740411969148",
+    link: "https://pay.hotmart.com/F98257568Y?off=l6vc739h&bid=1740409540686",
   },
 ];
 
 const Pricing = () => {
   return (
-    <section className="relative min-h-screen py-20 bg-gradient-to-br from-black via-regal/90 to-black overflow-hidden">
+    <section className="relative md:min-h-screen py-20 bg-gradient-to-br from-black via-regal/90 to-black overflow-hidden">
       {/* Efeitos de fundo */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.1),rgba(0,0,0,0))]" />
@@ -92,7 +55,7 @@ const Pricing = () => {
           </p>
         </motion.div>
 
-        <div className="grid gap-24 md:gap-10 lg:gap-10 grid-cols-1 md:grid-cols-3 lg:grid-cols-3 max-w-7xl mx-auto justify-center">
+        <div className="grid gap-24 md:gap-10 lg:gap-10 grid-cols-1 md:grid-cols-1 lg:grid-cols-1 max-w-7xl mx-auto justify-center">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
